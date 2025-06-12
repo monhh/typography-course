@@ -44,7 +44,7 @@ https://www.youtube.com/watch?v=WdBNYcWG0Yg
 
 @font-face {
     font-family: "ValentinaLocal";
-    src: url("/assets/fonts/Valentina-Regular/valentina-regular-webfont.woff2") format("woff2"),
+    src: url("./assets/fonts/Valentina-Regular/valentina-regular-webfont.woff2") format("woff2"),
          url("/assets/fonts/Valentina-Regular/valentina-regular-webfont.woff") format("woff");
 }
 
