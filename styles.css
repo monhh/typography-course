@@ -1,0 +1,103 @@
+
+/* 
+Self-hosting fonts explained (including Google fonts) // @font-face tutorial
+https://www.youtube.com/watch?v=zK-yy6C2Nck 
+
+
+CSS Typography Crash Course
+https://www.youtube.com/watch?v=WdBNYcWG0Yg
+
+*/
+
+
+/* debug ------------------ */
+/* *, *::before, *::after {
+    outline: solid lime;
+    outline-offset: -2px; 
+    background: pink;
+}
+*/
+
+@font-face {
+    font-family: Fraunces;
+    src: url('assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.woff2') format("woff2"),
+         url(https://assets.codepen.io/107367/Fraunces-VariableFont_SOFT%2CWONK%2Copsz%2Cwght.woff2);
+    /* By Undercase Type: fraunces.undercase.xyz */
+}
+
+@font-face {
+    font-family: 'RobotoLocal';
+    font-weight: 900;
+    src: url('assets/fonts/Roboto-convert/Roboto-Black.woff2') format("woff2"),
+         url('assets/fonts/Roboto-convert/Roboto-Black.woff') format("woff");
+}
+
+
+/* importo los distintos tipos de la fuente por separado, weight, italic ... */
+@font-face {
+    font-family: 'RobotoLocal';
+    font-weight: 300;
+    src: url('assets/fonts/Roboto-convert/Roboto-Light.woff2') format("woff2"),
+         url('assets/fonts/Roboto-convert/Roboto-Light.woff') format("woff");
+}
+
+
+@font-face {
+    font-family: "ValentinaLocal";
+    src: url("/assets/fonts/Valentina-Regular/valentina-regular-webfont.woff2") format("woff2"),
+         url("/assets/fonts/Valentina-Regular/valentina-regular-webfont.woff") format("woff");
+}
+
+
+body {
+    font-family: Fraunces;
+    background: #0cf;
+    padding: 2rem;
+}
+
+main {
+    background: #eee;
+    border-radius: 0.75em;
+    padding: 2em;
+}
+
+h1 {
+    color: #c34;
+    font-size: 8rem;
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+
+    font-variation-settings: "SOFT" 0;
+    transition: font-variation-settings 1s;
+}
+
+h1:hover {
+    font-variation-settings: "SOFT" 100;
+}
+
+.small {
+    font-size: 16px;
+    scale: 7;
+    margin-block: 100px;
+}
+
+p {
+    font-size: 2rem;
+}
+
+
+/* --------------------------------------------------- */
+
+h2 {
+    font-family: ValentinaLocal, serif;
+    font-variant-ligatures: common-ligatures discretionary-ligatures;
+
+    font-size: 1rem;
+    text-align: center;
+}
+
+p {
+    font-family: RobotoLocal, sans-serif;
+    font-weight: 300 /* cambiando el peso solo importo un tipo de fuente */
+}
