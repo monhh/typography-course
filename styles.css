@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=WdBNYcWG0Yg
 
 @font-face {
     font-family: Fraunces;
-    src: url('assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.woff2') format("woff2"),
+    src: url('./assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.woff2') format("woff2"),
          url(https://assets.codepen.io/107367/Fraunces-VariableFont_SOFT%2CWONK%2Copsz%2Cwght.woff2);
     /* By Undercase Type: fraunces.undercase.xyz */
 }
@@ -28,8 +28,8 @@ https://www.youtube.com/watch?v=WdBNYcWG0Yg
 @font-face {
     font-family: 'RobotoLocal';
     font-weight: 900;
-    src: url('assets/fonts/Roboto-convert/Roboto-Black.woff2') format("woff2"),
-         url('assets/fonts/Roboto-convert/Roboto-Black.woff') format("woff");
+    src: url('./assets/fonts/Roboto-convert/Roboto-Black.woff2') format("woff2"),
+         url('./assets/fonts/Roboto-convert/Roboto-Black.woff') format("woff");
 }
 
 
@@ -37,15 +37,20 @@ https://www.youtube.com/watch?v=WdBNYcWG0Yg
 @font-face {
     font-family: 'RobotoLocal';
     font-weight: 300;
-    src: url('assets/fonts/Roboto-convert/Roboto-Light.woff2') format("woff2"),
-         url('assets/fonts/Roboto-convert/Roboto-Light.woff') format("woff");
+    src: url('./assets/fonts/Roboto-convert/Roboto-Light.woff2') format("woff2"),
+         url('./assets/fonts/Roboto-convert/Roboto-Light.woff') format("woff");
 }
 
 
 @font-face {
     font-family: "ValentinaLocal";
     src: url("./assets/fonts/Valentina-Regular/valentina-regular-webfont.woff2") format("woff2"),
-         url("/assets/fonts/Valentina-Regular/valentina-regular-webfont.woff") format("woff");
+         url("./assets/fonts/Valentina-Regular/valentina-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "LiterataLocal";
+    src: url("./assets/fonts/literata-variablefont_opszwght-webfont.woff2") format("woff2");
 }
 
 
@@ -59,6 +64,10 @@ main {
     background: #eee;
     border-radius: 0.75em;
     padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -82,9 +91,9 @@ h1:hover {
     margin-block: 100px;
 }
 
-p {
+/* p {
     font-size: 2rem;
-}
+} */
 
 
 /* --------------------------------------------------- */
@@ -97,7 +106,70 @@ h2 {
     text-align: center;
 }
 
-p {
+h3 {
+    font-family: LiterataLocal;
+    text-align: center;
+    font-variant-ligatures: common-ligatures discretionary-ligatures;
+
+}
+
+
+/* cambiando el peso solo importo un tipo de fuente */
+/* p {
     font-family: RobotoLocal, sans-serif;
-    font-weight: 300 /* cambiando el peso solo importo un tipo de fuente */
+    font-weight: 300 
+}
+*/
+
+
+/* --------------------------------------------------- */
+
+.section_dos {
+    font-family: Literatalocal;
+    font-size: 2vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: 40vw;
+    font-variant-numeric: tabular-nums;
+}
+
+time {
+    font-variant-numeric: tabular-nums;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+.prose {
+    font-variant-numeric: oldstyle-nums;
+}
+.prose abbr{
+    font-variant-caps: all-small-caps;
+}
+
+.tech {
+    font-variant-numeric: diagonal-fractions;
+}
+
+.chemical {
+    font-feature-settings: "sinf";
+}
+
+.icon {
+    background: red;
+
+    display: inline-block;
+    height: 1cap;
+    width: 1cap;
+
+   /*  width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-top: calc(1ex - 1cap); */
 }
